@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+#map {
+	position: relative;
+	height: 100vh;
+	background-color: cadetblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#sidebar {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	top: 2rem;
+	right: 2rem;
+	bottom: 2rem;
+	border-radius: 0.5rem;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#sidebar h1 {
+	margin: 0;
+	font-size: 1.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	cursor: default;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form input {
+	outline: none;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background-color: #ededed;
+	border: none;
 }
 
-.App-link {
-  color: #61dafb;
+form input::placeholder {
+	color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#list li {
+	border-bottom: 1px #ededed solid;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 0.75rem;
+	cursor: pointer;
+}
+
+#list li:hover {
+	background: rgba(255, 245, 0, 0.4);
 }
