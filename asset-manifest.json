@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/map-testing-project/static/css/main.c2bc4d33.css",
+    "main.js": "/map-testing-project/static/js/main.1bbf6456.js",
+    "static/media/car-icon.svg": "/map-testing-project/static/media/car-icon.bed7505fb3ef40c1b0b63e02974a51bc.svg",
+    "index.html": "/map-testing-project/index.html",
+    "main.c2bc4d33.css.map": "/map-testing-project/static/css/main.c2bc4d33.css.map",
+    "main.1bbf6456.js.map": "/map-testing-project/static/js/main.1bbf6456.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2bc4d33.css",
+    "static/js/main.1bbf6456.js"
+  ]
+}
