@@ -2,9 +2,11 @@
 	position: relative;
 	height: 100vh;
 	background-color: cadetblue;
+	overflow: hidden;
 }
 
 #sidebar {
+	z-index: 9999;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -19,19 +21,13 @@
 #sidebar h1 {
 	margin: 0;
 	font-size: 1.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding: 0.5rem 1rem;
 	cursor: default;
 }
 
-form input {
+#form input {
 	outline: none;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding: 0.5rem 1rem;
 	background-color: #ededed;
 	border: none;
 }
@@ -44,18 +40,35 @@ form input::placeholder {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	overflow: auto;
 }
 
 #list li {
+	display: flex;
+	align-items: center;
 	border-bottom: 1px #ededed solid;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding: 0.5rem 1rem;
 	font-size: 0.75rem;
 	cursor: pointer;
 }
 
 #list li:hover {
 	background: rgba(255, 245, 0, 0.4);
+}
+
+#list li:active {
+	background: rgba(255, 245, 0, 0.8);
+}
+
+#list li.active {
+	background: rgba(255, 245, 0, 0.8);
+}
+
+#list li::before {
+	content: '';
+	display: block;
+	background: url('./assets/car-icon.svg') no-repeat;
+	width: 12px;
+	height: 12px;
+	margin-right: 0.5rem;
 }
