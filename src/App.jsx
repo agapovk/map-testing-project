@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 import './App.css';
 import data from './data';
-import { useCallback, useMemo, useState, useEffect } from 'react';
+import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
@@ -20,12 +19,9 @@ const icon = new Icon({
 function App() {
 	const [search, setSearch] = useState('');
 	const [active, setActive] = useState(undefined);
-	const [center, setCenter] = useState([]);
-	const [zoom, setZoom] = useState(5);
+	const [map, setMap] = useState(null);
 
 	const initial = [47.7852, 8.1234];
-
-	const [map, setMap] = useState(null);
 
 	const displayMarkers = data.map(({ latitude, longitude, id, name }) => {
 		return (
